@@ -154,7 +154,9 @@ def train_CNN(
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
+    plt.savefig("C:/Users/uig67136/.spyder-py3/python scripts/RadarClassification/Figures/velocity_vs_label_multitarget.png", dpi=150)
     plt.show()
+
     #====================================
     return model
 
