@@ -18,7 +18,7 @@ from skimage.transform import resize
 
 def generate_single_rd_map(targets,
                            fc=77e9, B=150e6, T_chirp=50e-6,
-                           N_samples=64, N_chirps=32, noise_std=0.5):
+                           N_samples=64, N_chirps=64, noise_std=0.5):
     """
     Generate a single synthetic Range-Doppler map (16x16) for one target.
     targets: list of dicts [{'R':..., 'v':..., 'amp':...}, ...]
@@ -30,7 +30,7 @@ def generate_single_rd_map(targets,
 
     # Time axes
     t_fast = np.linspace(0, T_chirp, N_samples)#0:64:T_chirp-array
-    t_slow = np.linspace(0, N_chirps*T_chirp, N_chirps)#0:32:32*50e^-6--array
+    t_slow = np.linspace(0, N_chirps*T_chirp, N_chirps)#0:64:64*50e^-6--array
 
     #initialize beat signal (matrix)
     beat_signal = np.zeros((N_samples, N_chirps), dtype=complex)
@@ -77,8 +77,8 @@ def generate_dataset(N_samples=100, R_range=(5,50), v_range=(-20,20)):
     true_velocities=[]
     for i in range(N_samples):
         
-        n_targets = np.random.randint(1, 5)#every Range Dopp map can have between 1 to 3 targets
-        #n_targets=1#signle target test
+        #n_targets = np.random.randint(1, 5)#every Range Dopp map can have between 1 to 3 targets
+        n_targets=8# fixed no of targets
         targets = []
         label=[]#array to be filled for 1 RD map
         RD_vel_arr=[]
