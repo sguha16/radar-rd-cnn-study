@@ -63,7 +63,6 @@ Although labels are defined by the maximum target velocity, the CNN operates on 
 ![Multi Target Velocity vs Label](Figures/increasingmultitarget/velocity_vs_label_CNN_targets2_acc_97_5%.png)
 
 ---
-
 ## 4. Phase 2: CNN vs Vision Transformer (ViT)
 
 ### 4.1 Why Introduce ViT?
