@@ -46,7 +46,7 @@ Instead, it learns **scene-level Doppler energy patterns**, including:
 **Interpretation:**  
 Performance is limited by radar resolution and noise.
 
-![Single Target Velocity vs Label](Figures/velocity_vs_label_singletarget.png)
+![Single Target Velocity vs Label](Figures/increasingmultitarget/velocity_vs_label_CNN.png)
 
 #### Multi-Target Scenes
 - Multiple Doppler peaks coexist
@@ -60,7 +60,7 @@ Although labels are defined by the maximum target velocity, the CNN operates on 
 
 **These errors reflect ambiguous supervision, not insufficient model capacity.**
 
-![Multi-Target Velocity vs Label](Figures/velocity_vs_label_multitarget.png)
+![Multi-Target Velocity vs Label](Figures/increasingmultitarget/velocity_vs_label_CNN_targets2_acc_97_5%.png)
 
 ---
 
